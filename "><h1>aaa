@@ -32,7 +32,7 @@
    {
       "description" : "BGSOUND",
       "name" : "BGSOUND",
-      "vector" : "<BGSOUND SRC=\"javascript:alert('XSS');\">"
+      "vector" : "<<BGSOUND SRC=\"javascript:alert('XSS');\">"
    },
    {
       "description" : "BODY image",
